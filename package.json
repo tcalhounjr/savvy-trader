@@ -24,7 +24,12 @@
     "intrinio-realtime": "^2.0.2",
     "mysql2": "^1.5.3",
     "passport": "^0.4.0",
+<<<<<<< HEAD
     "sequelize": "^4.37.10",
     "sequelize-cli": "^4.0.0"
+=======
+    "passport-google-oauth": "^1.0.0",
+    "sequelize": "^4.37.9"
+>>>>>>> 7fe1856e0376013d1e52898c5bae2426b44a3ee6
   }
 }
