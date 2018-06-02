@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "process.env.password",
-    "database": "database_development",
+    "password": "2823",
+    "database": "stocksDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
