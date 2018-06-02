@@ -17,7 +17,8 @@
     "username": "root",
     "password": null,
     "database": "database_production",
-    "host": "127.0.0.1",
+    "host": "https://git.heroku.com/powerful-caverns-59902.com",
     "dialect": "mysql"
   }
 }
+
