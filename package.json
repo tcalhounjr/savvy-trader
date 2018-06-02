@@ -3,29 +3,29 @@
   "version": "1.0.0",
   "description": "Project 2",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tcalhounjr/savvy-trader.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tcalhounjr/savvy-trader/issues"
-  },
-  "homepage": "https://github.com/tcalhounjr/savvy-trader#readme",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "intrinio-realtime": "^2.0.2",
-    "mysql2": "^1.5.3",
-    "passport": "^0.4.0",
-    "sequelize": "^4.37.9",
-    "sequelize-cli": "^4.0.0",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/tcalhounjr/savvy-trader.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/tcalhounjr/savvy-trader/issues"
+    },
+    "homepage": "https://github.com/tcalhounjr/savvy-trader#readme",
+    "dependencies": {
+      "body-parser": "^1.18.3",
+      "express": "^4.16.3",
+      "express-handlebars": "^3.0.0",
+      "intrinio-realtime": "^2.0.2",
+      "mysql2": "^1.5.3",
+      "passport": "^0.4.0",
+      "sequelize": "^4.37.9",
+      "sequelize-cli": "^4.0.0",
     "passport-google-oauth": "^1.0.0"
   }
 }
