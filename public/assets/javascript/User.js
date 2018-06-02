@@ -10,7 +10,8 @@ class User {
         
         let position = price * quantity;
         if (position > acctBalance) {
-            //flash some message 
+            //flash some message
+            return;
         }
         portfolio.push(ticker);
         return portfolio;
