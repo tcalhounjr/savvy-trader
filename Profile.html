@@ -9,15 +9,74 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="public/assets/javascript/semantic.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <style type="text/css">
+
+  p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  p1 {
+    text-align: left;
+    font-size: 1.5em;
+  }
+
+ h1 {
+   text-align: center;
+ }
+
+ img {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+ }
+
+  .overlay {
+    float: left;
+    margin: 0em 3em 1em 0em;
+  }
+  .overlay .menu {
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease;
+  }
+
+  .main.menu.fixed {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  .overlay.fixed .menu {
+    left: 800px;
+  }
+  
+  </style>
+
+ 
+
 </head>
 
 <body>
-  <div class="ui fixed inverted menu">
+    <script>
+        $('.content.example .ui.embed').embed();
+         </script>
+
+  <div class="ui top fixed inverted menu">
     <div class="ui container">
-        <a href="#" class="header item">
+        <a href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html#" class="header item">
             <img class="logo" src="images/stockicon.jpg"> Savvy Trader
           </a>
-          <a href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html#" class="item">Home</a>
+
+      <div class="ui simple dropdown item"> Profile
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="https://www.thebalance.com/stock-trading-101-358115">Stock Trading 101</a>
+          <a class="item" href="https://markets.wsj.com/us">Major Stock Indexes</a>
+      </div>
+      </div>
+
       <div class="ui simple dropdown item">
         Resources
         <i class="dropdown icon"></i>
@@ -36,13 +95,59 @@
           <a class="item" href="https://www.xe.com/currencyconverter/">xe Currency Converter</a>
         </div>
       </div>
-      <div class="ui large secondary inverted pointing menu">
-        <div class="right item">
-          <a class="ui inverted large button" href="file:///C:/Users/ni/Desktop/savvy-trader/Login.html" target="_blank">Start Trading Now</a>
-        </div>
-      </div>
     </div>
   </div>
+  <br><br>
+
+  <!-- <div class="overlay">
+      <div class="ui labeled icon vertical menu">
+        <a class="item"><i class="twitter icon"></i> Tweet</a>
+        <a class="item"><i class="facebook icon"></i> Share</a>
+        <a class="item"><i class="mail icon"></i> E-mail</a>
+      </div>
+    </div> -->
+
+    <h1 class="ui header">SAVVY TRADER</h1>
+
+      <div class="ui internally celled grid">
+          <div class="row">
+            <div class="three wide column">
+                <div class="ui right aligned category search">
+                    <div class="ui icon input">
+                      <input class="prompt" type="text" placeholder="Search Stocks...">
+                      <i class="search icon"></i>
+                    </div>
+                    <div class="results"></div>
+                  </div>
+            </div>
+            <div class="ten wide column">
+                <div class="ui center aligned container">
+                    <p>Savvy Trader is a good, solid stock market simulator that serves as an excellent practice tool for making actual investments and trying out various trading strategies. Additionally, it offers the opportunity to learn and master finance and investing basics, such as factoring in commissions and fees, shorting stocks, and utilizing popular analytical tools such as financial ratios like price/earnings and debt/equity.  With this tool, the user will have a beginning balance of $100,000 to buy and sell stocks as they wish. </p>
+                  </div>
+            </div>
+            <div class="three wide column">
+                <img class="ui small circular image pic1" src="images/example.jpg">
+                <p> User Name</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="three wide column">
+              
+            </div>
+            <div class="ten wide column">
+                <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
+                </div>
+            </div>
+            <div class="three wide column balance">
+              <p1>Current Balance: $$$</p1>
+              <br>
+              <p1>Stocks Owned:</p1>
+              
+            </div>
+          </div>
+        </div>
+  
 
   </body>
   </html>
