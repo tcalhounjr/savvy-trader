@@ -2,6 +2,7 @@
 // =============================================================
 const express = require("express");
 const bodyParser = require("body-parser");
+const initPassport = require('./config/passport');
 
 
 // Models
@@ -24,7 +25,8 @@ app.use(express.static("public"));
 
 //Routes
 //=============================================================
-require("./routes/api-routes.js")(app);
+require("./controllers/apiRoutes.js")(app);
+require("./controllers/htmlRoutes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================
