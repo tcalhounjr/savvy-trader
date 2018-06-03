@@ -46,7 +46,7 @@ module.exports = function(app) {
     // POST route for saving a new User
     app.User("/api/users", function(req, res) {
       console.log(req.body);
-      db.Usesr.create({
+      db.User.create({
         title: req.body.title,
         body: req.body.body,
         category: req.body.category
