@@ -8,11 +8,11 @@ const db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the posts
+  // GET route for getting all of the userss
   app.get("/api/stocks/", function(req, res) {
-    db.Post.findAll({})
-      .then(function(dbPost) {
-        res.json(dbPost);
+    db.users.findAll({})
+      .then(function(dbusers) {
+        res.json(dbusers);
       });
   });
 };
