@@ -18,15 +18,12 @@
       min-width: 100%;
       min-height: 100%;
     }
-
     body>.grid {
       height: 100%;
     }
-
     .image {
       margin-top: -100px;
     }
-
     .column {
       max-width: 450px;
     }
@@ -53,32 +50,46 @@
     <source src="background.mp4" type="video/mp4">
   </video>
 
-  <div class="ui middle aligned center aligned grid">
-    <div class="column">
-      <h2 class="ui teal image header">
-        <div class="content"></div>
-      </h2>
+  <div class="ui fixed inverted menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        <img class="logo" src="images/stockicon.jpg"> Savvy Trader </a>
+      <a href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html#" class="item">Home</a>
 
-      <form class="ui large form">
-        <div class="ui stacked segment">
-          <div class="field">
-      </form>
-
-      <div>
-        <a class="ui huge purple button" href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html" target="_blank">Create Account</a>
-      </div>
-      </div>
-
-      <div class="ui message">
-        <h2>Login with Google</h2>
-        <button class="ui icon large button">
-          <i class="google icon"></i>
-        </button>
-      </div>
-
-      </div>
+    <div class="ui simple dropdown item"> Resources
+      <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="https://www.thebalance.com/stock-trading-101-358115">Stock Trading 101</a>
+          <a class="item" href="https://markets.wsj.com/us">Major Stock Indexes</a>
+        <div class="divider"></div>
+        <div class="item">
+          <i class="dropdown icon"></i>
+          U.S. Stock Exchanges
+        <div class="menu">
+          <a class="item" href="https://www.nasdaq.com/">Nasdaq</a>
+            <a class="item" href="https://www.nyse.com/index">NYSE</a>
+        </div>
+        </div>
+        </div>
     </div>
 
-</body>
+    </div>
+  </div>
 
+  <div class="ui middle aligned center aligned grid">
+    <div class="column">
+      <form class="ui large form">
+      <div class="ui stacked segment">
+      <div class="field">
+      </form>
+    <div>
+      <a class="ui huge purple button" href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html" target="_blank">Create Account</a>
+    </div>
+    </div>
+      <button class="ui icon button"> Login in with Google
+        <i class="google icon" href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html" target="_blank"></i>
+      </button>
+  </div>
+  
+</body>
 </html>
