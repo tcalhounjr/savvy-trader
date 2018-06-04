@@ -10,6 +10,13 @@
   <script src="public/assets/javascript/semantic.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+  <script>
+      $('.content.example .ui.embed').embed();
+
+      $('.menu .item')
+        .tab();
+  </script>
+
   <style type="text/css">
 
      body {
@@ -64,9 +71,6 @@
 </head>
 
 <body>
-    <script>
-        $('.content.example .ui.embed').embed();
-         </script>
 
   <div class="ui top fixed inverted menu">
     <div class="ui container">
@@ -174,11 +178,31 @@
                       <th></th>
                     </tr></tfoot>
                   </table>
+
+                  <div class="ui buttons">
+                      <button class="ui teal button">Buy</button>
+                      <div class="or"></div>
+                      <button class="ui violet button">Sell</button>
+                    </div>
               
             </div>
             <div class="ten wide column">
-                <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
-                </div>
+                <div class="ui top attached tabular menu">
+                    <a class="item active" data-tab="first">First</a>
+                    <a class="item" data-tab="second">Second</a>
+                    <a class="item" data-tab="third">Third</a>
+                  </div>
+                  <div class="ui bottom attached tab segment active" data-tab="first">
+                    
+                    <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
+                    </div>
+                  </div>
+                  <div class="ui bottom attached tab segment" data-tab="second">
+                    
+                  </div>
+                  <div class="ui bottom attached tab segment" data-tab="third">
+                  
+                  </div>
             </div>
             <!-- <div class="three wide column balance">
               <p1>Current Balance: $$$</p1>
