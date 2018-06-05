@@ -2,6 +2,8 @@
 // =============================================================
 const express = require("express");
 const bodyParser = require("body-parser");
+const initPassport = require('./config/passport');
+const mysql = require('mysql2');
 
 
 // Models
@@ -22,9 +24,19 @@ app.use(bodyParser.json());
 //Static directory
 app.use(express.static("public"));
 
+
+//Set handlbars for template rendering
+//=============================================================
+var exphbs = require("express-handlebars");
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set('view engine', 'handlebars');
+
+
 //Routes
 //=============================================================
-require("./routes/api-routes.js")(app);
+require("./controllers/apiRoutes.js")(app);
+require("./controllers/htmlRoutes.js")(app);
 
 // Starts the server to begin listening
 // =============================================================

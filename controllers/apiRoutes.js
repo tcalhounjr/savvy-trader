@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const passport = require('passport');
 
 // Requiring our Stocks model
 const db = require("../models");
@@ -10,6 +11,18 @@ const db = require("../models");
 // Routes
 // =============================================================
 module.exports = function(app) {
+
+    //GET route for authenticating users
+    app.get("/auth/google", 
+    passport.authenticate('google', 
+    {scope: ['https://www.googleapis.com/auth/plus.login']}));
+
+    //Callback route for google redirect
+    app.get('/auth/google/callback', passport.authenticate('google',{ failureRedirect: '/login' }), 
+    function(req, res) {
+      console.log('you made it');
+      res.redirect('/profile');
+    });
 
     // GET route for getting all of the users
     app.get("/api/users/", function(req, res) {
@@ -44,9 +57,9 @@ module.exports = function(app) {
     });
   
     // POST route for saving a new User
-    app.User("/api/users", function(req, res) {
+    app.post("/api/users", function(req, res) {
       console.log(req.body);
-      db.Usesr.create({
+      db.Users.create({
         title: req.body.title,
         body: req.body.body,
         category: req.body.category
@@ -58,7 +71,7 @@ module.exports = function(app) {
   
     // DELETE route for deleting users
     app.delete("/api/users/:id", function(req, res) {
-      db.User.destroy({
+      db.Users.destroy({
         where: {
           id: req.params.id
         }
@@ -70,7 +83,7 @@ module.exports = function(app) {
   
     // PUT route for updating users
     app.put("/api/users", function(req, res) {
-      db.User.update(req.body,
+      db.Users.update(req.body,
         {
           where: {
             id: req.body.id
