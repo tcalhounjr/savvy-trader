@@ -17,6 +17,13 @@ module.exports = function(app) {
     passport.authenticate('google', 
     {scope: ['https://www.googleapis.com/auth/plus.login']}));
 
+    //Callback route for google redirect
+    app.get('/auth/google/callback', passport.authenticate('google',{ failureRedirect: '/login' }), 
+    function(req, res) {
+      console.log('you made it');
+      res.redirect('/profile');
+    });
+
     // GET route for getting all of the users
     app.get("/api/users/", function(req, res) {
       db.Users.findAll({})

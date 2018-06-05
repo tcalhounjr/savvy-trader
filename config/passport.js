@@ -2,6 +2,7 @@ var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const devCredentials = require('./client_id.json');
 const prodCredentials = require('./client_id.json');
+const db = require("../models");
 
 //   Use the GoogleStrategy within Passport.
 //   Strategies in Passport require a `verify` function, which accept
@@ -14,10 +15,10 @@ passport.use(new GoogleStrategy({
     callbackURL: "/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-       User.findOrCreate({ googleId: profile.id }, function (err, user) {
-         return done(err, user);
-       });
-  }
+    db.Users.findOrCreate({where: {googleId: profile.id}, defaults: {email: profile.email}}, function (err, user) {
+      return done(err, user);
+    });
+}
 ));
 
 // Exporting our configured passport
