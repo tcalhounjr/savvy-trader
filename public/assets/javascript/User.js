@@ -3,7 +3,7 @@
 class User {
     constructor(username, userID) {
         this.username = username;
-        this.userID = userID;
+        this.userID   = userID;
     }
 
     buyLong(ticker, quantity, price, acctBalance, portfolio) {

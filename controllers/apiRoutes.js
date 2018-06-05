@@ -47,7 +47,7 @@ module.exports = function(app) {
     app.User("/api/users", function(req, res) {
       console.log(req.body);
       db.User.create({
-        title: req.body.title,
+        name: req.body.name,
         body: req.body.body,
         category: req.body.category
       })

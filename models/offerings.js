@@ -12,15 +12,20 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false     
     },
     
-      purchase_price: {
-      type: DataTypes.FLOAT,
-      defaultValue: 0.00     
-    },
+    //   purchase_price: {
+    //   type: DataTypes.FLOAT,
+    //   defaultValue: 0.00     
+    // },
   
       current_price: {
       type: DataTypes.FLOAT,
       defaultValue: 0.00     
     },
+      previous_closing_price: {
+      type: DataTypes.FLOAT,
+      defaultValue: 0.00     
+    },
+    
       complete: {
       type: DataTypes.BOOLEAN,
       defaultValue: false     
