@@ -20,9 +20,11 @@
 
   <style type="text/css">
     body {
-      background-image: url('images/three.jpg') !important;
+      background-image: url('/assets/images/three.jpg') !important;
       background-size: cover !important;
     }
+
+  
 
 #fill {
   color: black;
@@ -32,6 +34,14 @@
       text-align: center;
     }
 
+#one {
+  border-bottom: black solid 1.5em;
+}
+
+#two {
+  border-bottom: black solid 1.5em;
+}
+
     p1 {
       text-align: left;
       font-size: 1.5em;
@@ -39,6 +49,7 @@
 
     h1 {
       text-align: center;
+      border: solid black;
     }
 
     h2 {
@@ -83,7 +94,7 @@
   <div class="ui top fixed inverted menu">
     <div class="ui container">
       <a href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html#" class="header item">
-        <img class="logo" src="images/stockicon.jpg"> Savvy Trader
+        <img class="logo" src="/assets/images/stockicon.jpg"> Savvy Trader
       </a>
 
       <div class="ui simple dropdown item"> Profile
@@ -117,19 +128,11 @@
   <br>
   <br>
 
-  <!-- <div class="overlay">
-      <div class="ui labeled icon vertical menu">
-        <a class="item"><i class="twitter icon"></i> Tweet</a>
-        <a class="item"><i class="facebook icon"></i> Share</a>
-        <a class="item"><i class="mail icon"></i> E-mail</a>
-      </div>
-    </div> -->
-
   <h1 class="ui header">SAVVY TRADER</h1>
 
   <!-- ROW 1 -->
   <div class="ui internally celled grid">
-    <div class="row">
+    <div id="one" class="row">
       <div class="three wide column">
         <img class="ui small circular image pic1" src="/assets/images/example.jpg">
         <p> User Name</p>
@@ -157,13 +160,9 @@
       </div>
     </div>
 
-    
-    <div class = "row">
-        <div id ="fill" class="sixteen wide column"></div>
-    </div>
  
     <!-- ROW 2  -->
-    <div class="row">
+    <div id="two" class="row">
       <br>
       <div class="ten wide column">
         <h2> Search Stocks</h2>
@@ -178,7 +177,7 @@
 
           <br>
           <br>
-          <table class="ui celled violet table">
+          <table class="ui inverted teal table">
             <thead>
             </thead>
             <thead>
@@ -290,10 +289,6 @@
     </div>
 
 
-
-
-
-
     <div class="ui inverted vertical footer segment">
       <div class="ui center aligned container">
         <div class="ui inverted section divider"></div>
@@ -309,5 +304,4 @@
   </div>
 
 </body>
-
 </html>
