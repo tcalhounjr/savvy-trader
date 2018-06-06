@@ -1,8 +1,4 @@
 node_modules
-<<<<<<< HEAD
 .env
 config.json
 client_id.json
-=======
-.env
->>>>>>> origin
