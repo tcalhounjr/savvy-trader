@@ -10,7 +10,7 @@ module.exports = function(app) {
 
   // GET route for getting all of the userss
   app.get("/api/stocks/", function(req, res) {
-    db.users.findAll({})
+    db.Users.findAll({})
       .then(function(dbusers) {
         res.json(dbusers);
       });
