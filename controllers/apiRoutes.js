@@ -13,9 +13,7 @@ const db = require("../models");
 module.exports = function(app) {
 
     //GET route for authenticating users
-    app.get("/auth/google", 
-    passport.authenticate('google', 
-    {scope: ['https://www.googleapis.com/auth/plus.login']}));
+    app.get('/auth/google', passport.authenticate('google',  { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
     //Callback route for google redirect
     app.get('/auth/google/callback', passport.authenticate('google',{ failureRedirect: '/login' }), 
