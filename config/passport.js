@@ -1,7 +1,7 @@
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const devCredentials = require('./client_id.json');
-const prodCredentials = require('./client_id.json');
+// const prodCredentials = require('./client_id.json');
 const db = require("../models");
 
 //   Use the GoogleStrategy within Passport.

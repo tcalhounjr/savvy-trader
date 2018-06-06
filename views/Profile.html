@@ -7,66 +7,74 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
   <script src="semantic/dist/semantic.min.js"></script>
 
   <script>
-      $('.content.example .ui.embed').embed();
+    $('.content.example .ui.embed').embed();
 
-      $('.menu .item')
-        .tab();
+    $('.menu .item')
+      .tab();
   </script>
 
   <style type="text/css">
-
-     body {
+    body {
       background-image: url('images/three.jpg') !important;
       background-size: cover !important;
     }
 
-  p {
-    font-size: 1.5em;
-    text-align: center;
-  }
+#fill {
+  color: black;
+}
+    p {
+      font-size: 1.5em;
+      text-align: center;
+    }
 
-  p1 {
-    text-align: left;
-    font-size: 1.5em;
-  }
+    p1 {
+      text-align: left;
+      font-size: 1.5em;
+    }
 
- h1 {
-   text-align: center;
- }
+    h1 {
+      text-align: center;
+    }
 
- img {
-  display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
- }
+    h2 {
+      text-align: center;
+    }
 
-  .overlay {
-    float: left;
-    margin: 0em 3em 1em 0em;
-  }
-  .overlay .menu {
-    position: relative;
-    left: 0;
-    transition: left 0.5s ease;
-  }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
+    }
 
-  .main.menu.fixed {
-    background-color: #FFFFFF;
-    border: 1px solid #DDD;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  }
-  .overlay.fixed .menu {
-    left: 800px;
-  }
-  
+    .overlay {
+      float: left;
+      margin: 0em 3em 1em 0em;
+    }
+
+    .overlay .menu {
+      position: relative;
+      left: 0;
+      transition: left 0.5s ease;
+    }
+
+    .main.menu.fixed {
+      background-color: #FFFFFF;
+      border: 1px solid #DDD;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .overlay.fixed .menu {
+      left: 800px;
+    }
   </style>
 
- 
+
 
 </head>
 
@@ -74,16 +82,16 @@
 
   <div class="ui top fixed inverted menu">
     <div class="ui container">
-        <a href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html#" class="header item">
-            <img class="logo" src="images/stockicon.jpg"> Savvy Trader
-          </a>
+      <a href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html#" class="header item">
+        <img class="logo" src="images/stockicon.jpg"> Savvy Trader
+      </a>
 
       <div class="ui simple dropdown item"> Profile
         <i class="dropdown icon"></i>
         <div class="menu">
           <a class="item" href="https://www.thebalance.com/stock-trading-101-358115">Stock Trading 101</a>
           <a class="item" href="https://markets.wsj.com/us">Major Stock Indexes</a>
-      </div>
+        </div>
       </div>
 
       <div class="ui simple dropdown item">
@@ -97,8 +105,8 @@
             <i class="dropdown icon"></i>
             U.S. Stock Exchanges
             <div class="menu">
-                <a class="item" href="https://www.nasdaq.com/">Nasdaq</a>
-                <a class="item" href="https://www.nyse.com/index">NYSE</a>
+              <a class="item" href="https://www.nasdaq.com/">Nasdaq</a>
+              <a class="item" href="https://www.nyse.com/index">NYSE</a>
             </div>
           </div>
           <a class="item" href="https://www.xe.com/currencyconverter/">xe Currency Converter</a>
@@ -106,7 +114,8 @@
       </div>
     </div>
   </div>
-  <br><br>
+  <br>
+  <br>
 
   <!-- <div class="overlay">
       <div class="ui labeled icon vertical menu">
@@ -116,109 +125,189 @@
       </div>
     </div> -->
 
-    <h1 class="ui header">SAVVY TRADER</h1>
+  <h1 class="ui header">SAVVY TRADER</h1>
 
-      <div class="ui internally celled grid">
-          <div class="row">
-            <div class="three wide column">
-                <div class="ui right aligned category search">
-                    <div class="ui icon input">
-                      <input class="prompt" type="text" placeholder="Search Stocks...">
-                      <i class="search icon"></i>
-                    </div>
-                    <div class="results"></div>
-                  </div>
-            </div>
-            <div class="ten wide column">
-                <div class="ui center aligned container">
-                    <p>Savvy Trader is a good, solid stock market simulator that serves as an excellent practice tool for making actual investments and trying out various trading strategies. Additionally, it offers the opportunity to learn and master finance and investing basics, such as factoring in commissions and fees, shorting stocks, and utilizing popular analytical tools such as financial ratios like price/earnings and debt/equity.  With this tool, the user will have a beginning balance of $100,000 to buy and sell stocks as they wish. </p>
-                  </div>
-            </div>
-            <div class="three wide column">
-                <img class="ui small circular image pic1" src="images/example.jpg">
-                <p> User Name</p>
-            </div>
+  <!-- ROW 1 -->
+  <div class="ui internally celled grid">
+    <div class="row">
+      <div class="three wide column">
+        <img class="ui small circular image pic1" src="/assets/images/example.jpg">
+        <p> User Name</p>
+        <div class="ui right aligned category search">
+
+          <br>
+
+          <div class="results"></div>
+        </div>
+      </div>
+      <div class="ten wide column">
+        <div class="ui center aligned container">
+          <p>Savvy Trader is a good, solid stock market simulator that serves as an excellent practice tool for making actual
+            investments and trying out various trading strategies. Additionally, it offers the opportunity to learn and master
+            finance and investing basics, such as factoring in commissions and fees, shorting stocks, and utilizing popular
+            analytical tools such as financial ratios like price/earnings and debt/equity. With this tool, the user will
+            have a beginning balance of $100,000 to buy and sell stocks as they wish. </p>
+        </div>
+        <br>
+        <br>
+      </div>
+      <br>
+      <br>
+      <div class="three wide column">
+      </div>
+    </div>
+
+    
+    <div class = "row">
+        <div id ="fill" class="sixteen wide column"></div>
+    </div>
+ 
+    <!-- ROW 2  -->
+    <div class="row">
+      <br>
+      <div class="ten wide column">
+        <h2> Search Stocks</h2>
+        <form class="ui form">
+          <div class="ui icon input">
+            <input id="search" class="prompt" type="text" placeholder="Search Stocks...">
+            <i class="search icon"></i>
+          </div>
+          <br>
+          <button id="searchstock" class="ui mini violet basic button">Search</button>
+          <div class="results"></div>
+
+          <br>
+          <br>
+          <table class="ui celled violet table">
+            <thead>
+            </thead>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>Current Price</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <div class="field">
+            <label>Quantity</label>
+            <input type="text" placeholder="Quantity">
           </div>
 
-          <div class="row">
-            <div class="six wide column">
-                <table class="ui celled violet table">
-                    <thead>
-                      <tr>
-                        <th>Current Balance:</th>
-                      </tr>
-                    </thead>
-                    <thead>
-                        <tr>
-                          <th>Stock</th>
-                          <th>Quantity</th>
-                          <th>Price</th>
-                        </tr>
-                      </thead>
-                    <tbody>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                    </tbody>
-                    <tfoot>
-                      <tr><th></th>
-                      <th></th>
-                      <th></th>
-                    </tr></tfoot>
-                  </table>
+          <button id="searchstock" class="ui violet basic button">Submit</button>
+        </form>
+        <br>
+        <div class="ui buttons">
+          <button class="ui teal button">Buy</button>
+          <div class="or"></div>
+          <button class="ui violet button">Sell</button>
+        </div>
+        </div>
 
-                  <div class="ui buttons">
-                      <button class="ui teal button">Buy</button>
-                      <div class="or"></div>
-                      <button class="ui violet button">Sell</button>
-                    </div>
-              
+        <div class="six wide column">
+          <h2> Search Companies</h2>
+          <div class="ui icon input">
+              <input id="search" class="prompt" type="text" placeholder="Search Company...">
+              <i class="search icon"></i>
             </div>
-            <div class="ten wide column">
-                <div class="ui top attached tabular menu">
-                    <a class="item active" data-tab="first">First</a>
-                    <a class="item" data-tab="second">Second</a>
-                    <a class="item" data-tab="third">Third</a>
-                  </div>
-                  <div class="ui bottom attached tab segment active" data-tab="first">
-                    
-                    <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
-                    </div>
-                  </div>
-                  <div class="ui bottom attached tab segment" data-tab="second">
-                    
-                  </div>
-                  <div class="ui bottom attached tab segment" data-tab="third">
-                  
-                  </div>
-            </div>
+        </div>
+   
+    </div>
+
+
+    <br>
+    <br>
+ <!-- ROW 3  -->
+    <div class="row">
+      <div class="eight wide column">
+        <div class="ui top attached tabular menu">
+          <a class="item active" data-tab="NYSE">First</a>
+          <a class="item" data-tab="second">NASDAQ</a>
+          <a class="item" data-tab="third">DOW JONES</a>
+        </div>
+        <div class="ui bottom attached tab segment active" data-tab="first">
+
+          <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
           </div>
         </div>
-        <div class="ui inverted vertical footer segment">
-            <div class="ui center aligned container">
-                <div class="ui inverted section divider"></div>
-                <img src="images/stockicon.jpg" class="ui centered mini image">
-                <div class="ui horizontal inverted small divided link list">
-                  <a class="item" href="#">Site Map</a>
-                  <a class="item" href="#">Contact Us</a>
-                  <a class="item" href="#">Terms and Conditions</a>
-                  <a class="item" href="#">Privacy Policy</a>
-                </div>
-              </div>
-              </div>
-              </div>
+        <div class="ui bottom attached tab segment" data-tab="second">
 
-  </body>
-  </html>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="third">
+        </div>
+      </div>
+
+      <div class="eight wide column">
+        <h2>Owned Stocks</h2>
+        <table class="ui celled violet table">
+          <thead>
+            <tr>
+              <th>Current Balance:</th>
+            </tr>
+          </thead>
+          <thead>
+            <tr>
+              <th>Stock</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+    </div>
+
+
+
+
+
+
+    <div class="ui inverted vertical footer segment">
+      <div class="ui center aligned container">
+        <div class="ui inverted section divider"></div>
+        <img src="images/stockicon.jpg" class="ui centered mini image">
+        <div class="ui horizontal inverted small divided link list">
+          <a class="item" href="#">Site Map</a>
+          <a class="item" href="#">Contact Us</a>
+          <a class="item" href="#">Terms and Conditions</a>
+          <a class="item" href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

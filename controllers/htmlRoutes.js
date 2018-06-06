@@ -18,7 +18,7 @@ module.exports = function(app) {
   });
 
   app.get("/profile", function(req, res) {
-    res.sendFile(path.join(__dirname, "../Profile.html"));
+    res.sendFile(path.join(__dirname, "../views/Profile.html"));
   });
 
 };

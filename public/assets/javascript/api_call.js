@@ -2,7 +2,9 @@ $(function() {
 const https = require("https");
 const IntrinioRealtime = require('intrinio-realtime')
 const AlphaVantageAPI = require('alpha-vantage-cli').AlphaVantageAPI;
-const [,,...input] = process.argv;
+//const [,,...input] = process.argv;
+
+let input = $("#search").toUpper().val().trim()
 
 
 
@@ -20,7 +22,7 @@ let baseURL = "https://api.intrinio.com/companies?ticker=" + input; //after figu
 let baseURL2 = "https://api.intrinio.com/prices?identifier=" + input;
 let params = {
     // api params go here
-    identifier: $("#search").toUpper().val().trim(),
+    identifier: input,
     // item: "",
     // start_date: "",
     // end_date: "",
@@ -34,7 +36,7 @@ let queryURL2 = baseURL2 + input
 let request = https.request({
     method: "GET",
     host: "api.intrinio.com",
-    path: "/prices?identifier=" + $("#search").toUpper().val().trim(),     //figure out then change to queryURL
+    path: "/prices?identifier=" + input,     //figure out then change to queryURL
     headers: {
         "Authorization": auth
     }
