@@ -18,8 +18,8 @@ module.exports = function(app) {
   });
 
   app.get("/profile", function(req, res) {
-    res.render('profile', {
-      userFirstName: 'Vinny!!!!'
+    res.render('Profile', {
+      userFirstName: 'Nicole'
     });
   });
 
