@@ -53,6 +53,9 @@ app.set('view engine', 'handlebars');
 //=============================================================
 require("./controllers/apiRoutes.js")(app);
 require("./controllers/htmlRoutes.js")(app);
+
+//api folder
+//==============================================================
 require("./public/javascript/api_call")
 
 // Starts the server to begin listening
