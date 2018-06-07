@@ -7,74 +7,66 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="./public/semantic/dist/semantic.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="semantic/dist/semantic.min.js"></script>
 
   <script>
-    $('.content.example .ui.embed').embed();
+      $('.content.example .ui.embed').embed();
 
-    $('.menu .item')
-      .tab();
+      $('.menu .item')
+        .tab();
   </script>
 
   <style type="text/css">
-    body {
+
+     body {
       background-image: url('images/three.jpg') !important;
       background-size: cover !important;
     }
 
-#fill {
-  color: black;
-}
-    p {
-      font-size: 1.5em;
-      text-align: center;
-    }
+  p {
+    font-size: 1.5em;
+    text-align: center;
+  }
 
-    p1 {
-      text-align: left;
-      font-size: 1.5em;
-    }
+  p1 {
+    text-align: left;
+    font-size: 1.5em;
+  }
 
-    h1 {
-      text-align: center;
-    }
+ h1 {
+   text-align: center;
+ }
 
-    h2 {
-      text-align: center;
-    }
+ img {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+ }
 
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-    }
+  .overlay {
+    float: left;
+    margin: 0em 3em 1em 0em;
+  }
+  .overlay .menu {
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease;
+  }
 
-    .overlay {
-      float: left;
-      margin: 0em 3em 1em 0em;
-    }
-
-    .overlay .menu {
-      position: relative;
-      left: 0;
-      transition: left 0.5s ease;
-    }
-
-    .main.menu.fixed {
-      background-color: #FFFFFF;
-      border: 1px solid #DDD;
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    .overlay.fixed .menu {
-      left: 800px;
-    }
+  .main.menu.fixed {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  .overlay.fixed .menu {
+    left: 800px;
+  }
+  
   </style>
 
-
+ 
 
 </head>
 
@@ -83,7 +75,7 @@
   <div class="ui top fixed inverted menu">
     <div class="ui container">
       <a href="file:///C:/Users/ni/Desktop/savvy-trader/Homepage.html#" class="header item">
-        <img class="logo" src="images/stockicon.jpg"> Savvy Trader
+        <img class="logo" src="/assets/images/stockicon.jpg"> Savvy Trader
       </a>
 
       <div class="ui simple dropdown item"> Profile
@@ -91,7 +83,7 @@
         <div class="menu">
           <a class="item" href="https://www.thebalance.com/stock-trading-101-358115">Stock Trading 101</a>
           <a class="item" href="https://markets.wsj.com/us">Major Stock Indexes</a>
-        </div>
+      </div>
       </div>
 
       <div class="ui simple dropdown item">
@@ -105,8 +97,8 @@
             <i class="dropdown icon"></i>
             U.S. Stock Exchanges
             <div class="menu">
-              <a class="item" href="https://www.nasdaq.com/">Nasdaq</a>
-              <a class="item" href="https://www.nyse.com/index">NYSE</a>
+                <a class="item" href="https://www.nasdaq.com/">Nasdaq</a>
+                <a class="item" href="https://www.nyse.com/index">NYSE</a>
             </div>
           </div>
           <a class="item" href="https://www.xe.com/currencyconverter/">xe Currency Converter</a>
@@ -114,8 +106,7 @@
       </div>
     </div>
   </div>
-  <br>
-  <br>
+  <br><br>
 
   <!-- <div class="overlay">
       <div class="ui labeled icon vertical menu">
@@ -202,21 +193,69 @@
             <input type="text" placeholder="Quantity">
           </div>
 
-          <button id="searchstock" class="ui violet basic button">Submit</button>
-        </form>
-        <br>
-        <div class="ui buttons">
-          <button class="ui teal button">Buy</button>
-          <div class="or"></div>
-          <button class="ui violet button">Sell</button>
-        </div>
-        </div>
+          <div class="row">
+            <div class="six wide column">
+                <table class="ui celled violet table">
+                    <thead>
+                      <tr>
+                        <th>Current Balance:</th>
+                      </tr>
+                    </thead>
+                    <thead>
+                        <tr>
+                          <th>Stock</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                        </tr>
+                      </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr><th></th>
+                      <th></th>
+                      <th></th>
+                    </tr></tfoot>
+                  </table>
 
-        <div class="six wide column">
-          <h2> Search Companies</h2>
-          <div class="ui icon input">
-              <input id="search" class="prompt" type="text" placeholder="Search Company...">
-              <i class="search icon"></i>
+                  <div class="ui buttons">
+                      <button class="ui teal button">Buy</button>
+                      <div class="or"></div>
+                      <button class="ui violet button">Sell</button>
+                    </div>
+              
+            </div>
+            <div class="ten wide column">
+                <div class="ui top attached tabular menu">
+                    <a class="item active" data-tab="first">First</a>
+                    <a class="item" data-tab="second">Second</a>
+                    <a class="item" data-tab="third">Third</a>
+                  </div>
+                  <div class="ui bottom attached tab segment active" data-tab="first">
+                    
+                    <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
+                    </div>
+                  </div>
+                  <div class="ui bottom attached tab segment" data-tab="second">
+                    
+                  </div>
+                  <div class="ui bottom attached tab segment" data-tab="third">
+                  
+                  </div>
             </div>
         </div>
 
@@ -229,7 +268,7 @@
     <div class="row">
       <div class="eight wide column">
         <div class="ui top attached tabular menu">
-          <a class="item active" data-tab="NYSE">First</a>
+          <a class="item active" data-tab="NYSE">NYSE</a>
           <a class="item" data-tab="second">NASDAQ</a>
           <a class="item" data-tab="third">DOW JONES</a>
         </div>
@@ -287,7 +326,7 @@
         </table>
       </div>
 
-    </div>
+  
 
 
 
@@ -297,7 +336,7 @@
     <div class="ui inverted vertical footer segment">
       <div class="ui center aligned container">
         <div class="ui inverted section divider"></div>
-        <img src="images/stockicon.jpg" class="ui centered mini image">
+        <img src="/assets/images/stockicon.jpg" class="ui centered mini image">
         <div class="ui horizontal inverted small divided link list">
           <a class="item" href="#">Site Map</a>
           <a class="item" href="#">Contact Us</a>
