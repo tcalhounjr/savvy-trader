@@ -15,11 +15,32 @@ passport.use(new GoogleStrategy({
     callbackURL: "/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-    db.Users.findOrCreate({where: {googleId: profile.id}, defaults: {email: profile.email}}, function (err, user) {
-      return done(err, user);
-    });
+    console.log(profile);
+    console.log(profile.id);
+    db.Users.findOne({where: {googleId: profile.id}})
+      .then(function(dbUser) {
+        if (!dbUser) {
+          done(null, false,);
+        }
+        else {
+          console.log(dbUser);
+          return done(err, dbUser);
+        }
+      });
+
+    // db.Users.findOrCreate({where: {googleId: profile.id}, defaults: {email: profile.email}}, function (err, user) {
+    //   return done(err, user);
+    // });
 }
 ));
+
+passport.serializeUser(function(user, cb) {
+  cb(null, user);
+});
+
+passport.deserializeUser(function(obj, cb) {
+  cb(null, obj);
+});
 
 // Exporting our configured passport
 module.exports = passport;
