@@ -4,6 +4,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const initPassport = require('./config/passport');
 const mysql = require('mysql2');
+const https = require("https");
+const IntrinioRealtime = require('intrinio-realtime')
+const AlphaVantageAPI = require('alpha-vantage-cli').AlphaVantageAPI;
+const request = require('ajax-request');
 
 console.log('hello from vinny')
 
@@ -24,6 +28,21 @@ app.use(bodyParser.json());
 
 //Static directory
 app.use(express.static("public"));
+
+
+
+//=====================================
+//Functions for api call
+//=====================================
+
+  // This function grabs stocks from the database and updates the view
+  function getstocks() {
+    $.get("/api/stocks", function(data) {
+      stocks = data;
+      initializeRows();
+    });
+  }
+
 
 
 //Set handlbars for template rendering
