@@ -19,7 +19,7 @@ module.exports = function(app) {
     app.get('/auth/google/callback', passport.authenticate('google',{ failureRedirect: '/login' }), 
     function(req, res) {
       console.log('you made it');
-      res.redirect('/profile');
+      res.redirect('/Profile');
     });
 
     // GET route for getting all of the users

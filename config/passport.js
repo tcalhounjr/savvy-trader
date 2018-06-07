@@ -20,7 +20,7 @@ passport.use(new GoogleStrategy({
     db.Users.findOne({where: {googleId: profile.id}})
       .then(function(dbUser) {
         if (!dbUser) {
-          res.redirect('/api/login');
+          done(null, false,);
         }
         else {
           console.log(dbUser);
