@@ -22,7 +22,9 @@ module.exports = function(app) {
   });
 
   app.get("/profile", function(req, res) {
-    res.sendFile(path.join(__dirname, "../views/Profile.html"));
+    res.render('Profile', {
+      userFirstName: 'Nicole'
+    });
   });
 
 };

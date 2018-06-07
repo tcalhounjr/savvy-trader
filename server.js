@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const initPassport = require('./config/passport');
 const mysql = require('mysql2');
 
+console.log('hello from vinny')
 
 // Models
 //==============================================================
