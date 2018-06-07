@@ -13,6 +13,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../views/Homepage.html"));
   });
 
+  app.get("/home", function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/Homepage.html"));
+  });
+
   app.get("/login", function(req, res) {
     res.sendFile(path.join(__dirname, "../views/Login.html"));
   });

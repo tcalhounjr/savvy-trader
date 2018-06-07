@@ -13,9 +13,7 @@ const db = require("../models");
 module.exports = function(app) {
 
     //GET route for authenticating users
-    app.get("/auth/google", 
-    passport.authenticate('google', 
-    {scope: ['https://www.googleapis.com/auth/plus.login']}));
+    app.get('/auth/google', passport.authenticate('google',  { scope: ['https://www.googleapis.com/auth/plus.login'] }));
 
     //Callback route for google redirect
     app.get('/auth/google/callback', passport.authenticate('google',{ failureRedirect: '/login' }), 
@@ -55,14 +53,30 @@ module.exports = function(app) {
           res.json(dbUser);
         });
     });
+
+    app.post("/api/login", passport.authenticate("local"), function(req, res) {
+      // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
+      // So we're sending the user back the route to the members page because the redirect will happen on the front end
+      // They won't get this or even be able to access this page if they aren't authed
+      console.log(req.body);
+      db.Users.create({
+        googleId: req.body.title,
+        username: req.body.body,
+      })
+        .then(function(dbUser) {
+          res.redirect("/profile/:id");
+        });
+      
+    });
+
+    // app.get("api/profile/:id")
   
     // POST route for saving a new User
     app.post("/api/users", function(req, res) {
       console.log(req.body);
       db.Users.create({
-        title: req.body.title,
-        body: req.body.body,
-        category: req.body.category
+        googleId: req.body.title,
+        username: req.body.body,
       })
         .then(function(dbUser) {
           res.json(dbUser);
