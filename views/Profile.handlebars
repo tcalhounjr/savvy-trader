@@ -45,24 +45,7 @@
     width: 40%;
  }
 
-  .overlay {
-    float: left;
-    margin: 0em 3em 1em 0em;
-  }
-  .overlay .menu {
-    position: relative;
-    left: 0;
-    transition: left 0.5s ease;
-  }
 
-  .main.menu.fixed {
-    background-color: #FFFFFF;
-    border: 1px solid #DDD;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-  }
-  .overlay.fixed .menu {
-    left: 800px;
-  }
   
   </style>
 
@@ -108,13 +91,7 @@
   </div>
   <br><br>
 
-  <!-- <div class="overlay">
-      <div class="ui labeled icon vertical menu">
-        <a class="item"><i class="twitter icon"></i> Tweet</a>
-        <a class="item"><i class="facebook icon"></i> Share</a>
-        <a class="item"><i class="mail icon"></i> E-mail</a>
-      </div>
-    </div> -->
+  
 
   <h1 class="ui header">SAVVY TRADER</h1>
 
@@ -149,9 +126,7 @@
     </div>
 
 
-    <div class = "row">
-        <div id ="fill" class="sixteen wide column"></div>
-    </div>
+   
 
     <!-- ROW 2  -->
     <div class="row">
@@ -191,6 +166,7 @@
           <div class="field">
             <label>Quantity</label>
             <input type="text" placeholder="Quantity">
+          </div>
           </div>
 
           <div class="row">
@@ -239,27 +215,11 @@
                     </div>
               
             </div>
-            <div class="ten wide column">
-                <div class="ui top attached tabular menu">
-                    <a class="item active" data-tab="first">First</a>
-                    <a class="item" data-tab="second">Second</a>
-                    <a class="item" data-tab="third">Third</a>
-                  </div>
-                  <div class="ui bottom attached tab segment active" data-tab="first">
-                    
-                    <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
-                    </div>
-                  </div>
-                  <div class="ui bottom attached tab segment" data-tab="second">
-                    
-                  </div>
-                  <div class="ui bottom attached tab segment" data-tab="third">
-                  
-                  </div>
-            </div>
+         
+        </div>
         </div>
 
-    </div>
+    
 
 
     <br>
@@ -272,15 +232,15 @@
           <a class="item" data-tab="second">NASDAQ</a>
           <a class="item" data-tab="third">DOW JONES</a>
         </div>
-        <div class="ui bottom attached tab segment active" data-tab="first">
+        <div class="ui bottom attached tab segment active" data-tab="NYSE">
 
           <div class="ui embed" data-source="youtube" data-id="CgM68Yf-C0Q" data-placeholder="images/fin.jpg">
           </div>
         </div>
-        <div class="ui bottom attached tab segment" data-tab="second">
+        <div class="ui bottom attached tab segment" data-tab="Dow Jones">
 
         </div>
-        <div class="ui bottom attached tab segment" data-tab="third">
+        <div class="ui bottom attached tab segment" data-tab="NASDAQ">
         </div>
       </div>
 
@@ -345,6 +305,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
     <script src="./public/assets/javascript/api_call.js"></script>
 </body>
