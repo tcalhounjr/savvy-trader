@@ -12,12 +12,6 @@ let input = $("#search").toUpper().val().trim()
 //=====================================
 
   // This function grabs stocks from the database and updates the view
-//   function getstocks() {
-//     $.get("/api/stocks", function(data) {
-//       stocks = data;
-//       initializeRows();
-//     });
-//   }
 
   // This updates the stocks db
   function updateStock(stock) {

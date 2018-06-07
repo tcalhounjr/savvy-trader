@@ -4,10 +4,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const initPassport = require('./config/passport');
 const mysql = require('mysql2');
-const https = require("https");
-const IntrinioRealtime = require('intrinio-realtime')
-const AlphaVantageAPI = require('alpha-vantage-cli').AlphaVantageAPI;
-const request = require('ajax-request');
 
 console.log('hello from vinny')
 
@@ -35,13 +31,13 @@ app.use(express.static("public"));
 //Functions for api call
 //=====================================
 
-  // This function grabs stocks from the database and updates the view
-  function getstocks() {
-    $.get("/api/stocks", function(data) {
-      stocks = data;
-      initializeRows();
-    });
-  }
+const https = require("https");
+const IntrinioRealtime = require('intrinio-realtime')
+const AlphaVantageAPI = require('alpha-vantage-cli').AlphaVantageAPI;
+const request = require('ajax-request');
+
+
+
 
 
 
@@ -57,6 +53,7 @@ app.set('view engine', 'handlebars');
 //=============================================================
 require("./controllers/apiRoutes.js")(app);
 require("./controllers/htmlRoutes.js")(app);
+require("./public/javascript/api_call")
 
 // Starts the server to begin listening
 // =============================================================
