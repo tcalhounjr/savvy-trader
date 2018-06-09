@@ -1,3 +1,8 @@
+// export default {
+//     name: './public/assets/javascript/api_call.js',
+// };
+
+
 $(function() {
 
 let input = $("#search").toUpper().val().trim();
@@ -16,8 +21,8 @@ let input = $("#search").toUpper().val().trim();
     })
         // After the data from the AJAX request comes back
         .then(function (response) {
-            console.log(response);           
-    
+            console.log(response); 
+            
      });
     };
 
@@ -40,7 +45,9 @@ let input = $("#search").toUpper().val().trim();
     $.ajax({
       method: "DELETE",
       url: "/api/stocks/" + id
-    }).then(getStocks);
+    }).then(function(del){
+        console.log("removed");
+    });
   };
 
     // queryURL = baseURL + '?' + input;
@@ -68,7 +75,8 @@ let input = $("#search").toUpper().val().trim();
     
         
 
-function apiCall() {
+module.exports = {
+    api: function apiCall() {
 
 //=======================
 //IntrinioRealtime ==> will likely be removed
@@ -140,7 +148,7 @@ request.end();
 
 console.log(queryURL);
 
-
+        }
 }
 
  $("#searchstock").on("click", function (event) {

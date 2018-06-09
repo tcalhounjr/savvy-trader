@@ -28,13 +28,16 @@ app.use(express.static("public"));
 
 
 //=====================================
-//Functions for api call
+//Dependency declarations for api call
 //=====================================
 
 const https = require("https");
 const IntrinioRealtime = require('intrinio-realtime')
 const AlphaVantageAPI = require('alpha-vantage-cli').AlphaVantageAPI;
 const request = require('ajax-request');
+const importFile = require("import-file");
+const apiCall = require("./public/assets/javascript/api_call.js")
+
 
 
 
@@ -48,7 +51,6 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set('view engine', 'handlebars');
 
-
 //Routes
 //=============================================================
 require("./controllers/apiRoutes.js")(app);
@@ -56,7 +58,7 @@ require("./controllers/htmlRoutes.js")(app);
 
 //api folder
 //==============================================================
-require("./public/javascript/api_call")
+//require("./public/assets/javascript/api_call.js")
 
 // Starts the server to begin listening
 // =============================================================
