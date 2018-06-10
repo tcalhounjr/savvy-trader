@@ -1,54 +1,51 @@
-// export default {
-//     name: './public/assets/javascript/api_call.js',
-// };
 
 
-$(function() {
+// $(function() {
 
-let input = $("#search").toUpper().val().trim();
+// let input = $("#search").toUpper().val().trim();
 
 
-//=====================================
-//Functions
-//=====================================
+// //=====================================
+// //Functions
+// //=====================================
 
-  // This function grabs stocks from the database and updates the view
- function getStock(stock) {
-    $.ajax({
-        datatype: json,
-        url: queryURL,
-        method: "GET"
-    })
-        // After the data from the AJAX request comes back
-        .then(function (response) {
-            console.log(response); 
+//   // This function grabs stocks from the database and updates the view
+//  function getStock(stock) {
+//     $.ajax({
+//         datatype: json,
+//         url: queryURL,
+//         method: "GET"
+//     })
+//         // After the data from the AJAX request comes back
+//         .then(function (response) {
+//             console.log(response); 
             
-     });
-    };
+//      });
+//     };
 
-  // This updates the stocks db
-  function updateStock(stock) {
-    $.ajax({
-      method: "PUT",
-      url: "/api/stocks",
-      data: stock
-    })
-    .then(function(getStocks) {
+//   // This updates the stocks db
+//   function updateStock(stock) {
+//     $.ajax({
+//       method: "PUT",
+//       url: "/api/stocks",
+//       data: stock
+//     })
+//     .then(function(getStocks) {
         
-    });
-  };
+//     });
+//   };
 
-  // This function deletes a stock when the user clicks the delete button
-  function deletestock(event) {
-    event.stopPropagation();
-    var id = $(this).data("id");
-    $.ajax({
-      method: "DELETE",
-      url: "/api/stocks/" + id
-    }).then(function(del){
-        console.log("removed");
-    });
-  };
+//   // This function deletes a stock when the user clicks the delete button
+//   function deletestock(event) {
+//     event.stopPropagation();
+//     var id = $(this).data("id");
+//     $.ajax({
+//       method: "DELETE",
+//       url: "/api/stocks/" + id
+//     }).then(function(del){
+//         console.log("removed");
+//     });
+//   };
 
     // queryURL = baseURL + '?' + input;
     
@@ -151,11 +148,14 @@ console.log(queryURL);
         }
 }
 
- $("#searchstock").on("click", function (event) {
-   console.log("searchstocked pressed");
+//  $("#searchstock").on("click", function (event) {
+//    console.log("searchstocked pressed");
 
- apiCall()
+//  apiCall()
 
 
-   }); 
-});
+//    }); 
+// });
+// export default {
+//     name: './public/assets/javascript/api_call.js',
+// };
